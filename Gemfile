@@ -44,7 +44,7 @@ gem 'cancan', '~> 1.4.1'
 gem 'immortal', git: 'git://github.com/davidmm/immortal.git', branch: 'postgresql_fix'
 gem 'rack-ssl-enforcer', require: 'rack/ssl-enforcer'
 gem 'jammit'
-gem 'rake', '0.9.2'
+gem 'rake'
 gem 'thin'
 
 group :development do
@@ -77,3 +77,5 @@ group :testing do
   gem 'capybara', '~> 0.4.0'
   gem 'launchy', '~> 0.3.7'
 end
+
+gem 'capistrano', '~> 3.0.1'
