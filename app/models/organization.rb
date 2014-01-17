@@ -31,7 +31,7 @@ class Organization < ActiveRecord::Base
 
   LogoSizes = {
     :square   => [96, 96],
-    :top      => [134, 36]
+    :top1      => [134, 36]
   }
 
   has_attached_file :logo,

@@ -7,7 +7,7 @@ module ApplicationHelper
   end
 
   def logo_image
-    logo = @organization ? @organization.logo(:top) : "header_logo_black.png"
+    logo = @organization ? @organization.logo(:top1) : "header_logo_black.png"
     image_tag(logo, :alt => "Teambox")
   end
 
@@ -108,8 +108,11 @@ module ApplicationHelper
   end
 
   def help_link
-    if url = Teambox.config.help_url
-      link_to t('.help'), "#{url}/#{controller.controller_name}"
+    #if url = Teambox.config.help_url
+    #  link_to t('.help'), "#{url}/#{controller.controller_name}"
+    #end
+    if url = 'sricoop.com'
+      link_to t('.help'), "#{url}"
     end
   end
 
@@ -213,7 +216,7 @@ module ApplicationHelper
   # collecting stats about Teambox installations
   def tracking_code
     if Teambox.config.tracking_enabled and Rails.env.production?
-      fake_img = "http://teambox.com/logo.png/#{request.host}"
+      fake_img = "http://sricoop.com/logo.png/#{request.host}"
       %(<div style="background-image: url(#{fake_img})"></div>).html_safe
     end
   end

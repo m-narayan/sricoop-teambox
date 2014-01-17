@@ -1,4 +1,4 @@
-%h1= image_tag @organization.logo.url(:top), :alt => @organization.name
+%h1= image_tag @organization.logo.url(:top1), :alt => @organization.name
 
 .custom_html
   = @organization.description.try(:html_safe) || "Configure this text by going editing your organization's preferences."

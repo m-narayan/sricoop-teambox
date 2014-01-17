@@ -1,4 +1,4 @@
-%h1= image_tag @organization.logo.url(:top), :alt => h(@organization.name)
+%h1= image_tag @organization.logo.url(:top1), :alt => h(@organization.name)
 
 - form_tag sites_path, :class => 'new_session', :id => 'new_session' do
   = hidden_field_tag :id, @organization.permalink

@@ -6,10 +6,10 @@ if @activities.any?
         page.replace_html :"thread_#{thread.thread_id}_comments", render(:partial => 'activities/thread_comments', :locals => { :comments => thread.thread.comments, :thread => thread.thread })
       page << "}"
       page << "else {"
-        page.insert_html :top, :activities, show_threaded_activity(thread)
+        page.insert_html :top1, :activities, show_threaded_activity(thread)
       page << "}"
     else
-      page.insert_html :top, :activities, show_threaded_activity(thread)
+      page.insert_html :top1, :activities, show_threaded_activity(thread)
     end
   end
 
