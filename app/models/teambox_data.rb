@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class TeamboxData < ActiveRecord::Base
   set_table_name("teambox_datas") # Backward compatibility
+  set_table_name("teambox_datas") # Backward compatibility
   include Immortal
 
   belongs_to :user

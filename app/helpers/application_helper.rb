@@ -108,12 +108,12 @@ module ApplicationHelper
   end
 
   def help_link
-    #if url = Teambox.config.help_url
-    #  link_to t('.help'), "#{url}/#{controller.controller_name}"
-    #end
-    if url = 'sricoop.com'
-      link_to t('.help'), "#{url}"
+    if url = Teambox.config.help_url
+      link_to t('.help'), "#{url}/#{controller.controller_name}"
     end
+    #if url = 'sricoop.com'
+    #  link_to t('.help'), "#{url}"
+    #end
   end
 
   def to_sentence(array)
